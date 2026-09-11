@@ -1,0 +1,69 @@
+seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  splits_dir: data/splits
+
+  magnatagatune:
+    audio_dir: data/raw/magnatagatune/MagnaTagATune
+    annotations_csv: data/raw/magnatagatune/annotations_final.csv
+    top_k_tags: 50               # spec: "top-50 tags" for Task 1
+
+  gtzan:
+    audio_dir: data/raw/gtzan/genres_original
+    genres: [blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock]
+
+  deam:
+    audio_dir: data/raw/deam/DEAM_audio/MEMD_audio
+    static_annotations_csv: data/raw/deam/DEAM_Annotations/annotations/annotations averaged per song/song_level/static_annotations_averaged_songs_1_2000.csv
+    static_annotations_csv2: data/raw/deam/DEAM_Annotations/annotations/annotations averaged per song/song_level/static_annotations_averaged_songs_2000_2058.csv
+    dynamic_annotations_dir: data/raw/deam/DEAM_Annotations/annotations/annotations averaged per song/dynamic (per second annotations)
+
+  use_musiccaps: false            # see README: MusicCaps not provided, Task 4 uses pseudo-captions
+  musiccaps_csv: null
+
+audio:
+  sample_rate: 22050
+  n_mels: 128
+  n_chroma: 12
+  n_fft: 2048
+  hop_length: 512
+  segment_seconds: 5.0           # 5-10s windows per spec
+  clip_seconds: 30.0             # GTZAN/MagnaTagATune clip length assumed
+
+graph:
+  segment_similarity_threshold: 0.75   # tau for cosine similarity edges
+  chord_vocab: [C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B,
+                Cm, Csm, Dm, Dsm, Em, Fm, Fsm, Gm, Gsm, Am, Asm, Bm, N]  # N = no-chord
+
+text:
+  bert_model: distilbert-base-uncased
+  max_length: 128
+  fine_tune_bert: true
+
+model:
+  gnn_type: graphsage             # graphsage | gat
+  gnn_hidden_dim: 128
+  gnn_num_layers: 3
+  gnn_dropout: 0.3
+  fusion_dim: 256
+  attention_heads: 4
+  contrastive_temperature: 0.07
+  contrastive_embed_dim: 128
+
+train:
+  batch_size: 16
+  epochs: 30
+  lr_head: 1.0e-3
+  lr_bert: 2.0e-5
+  lr_gnn: 1.0e-3
+  weight_decay: 1.0e-4
+  emotion_loss_weight_alpha: 1.0   # alpha for valence
+  emotion_loss_weight_beta: 1.0    # beta for arousal
+  early_stopping_patience: 5
+  num_workers: 4
+
+eval:
+  retrieval_ks: [1, 5, 10]
+  tsne_perplexity: 30

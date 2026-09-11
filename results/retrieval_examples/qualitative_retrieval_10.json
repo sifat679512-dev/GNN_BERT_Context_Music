@@ -1,0 +1,112 @@
+[
+  {
+    "query_caption": "a classical, opera track featuring strings, violin",
+    "ground_truth_clip_id": 0,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07795686274766922,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a classical, opera, classic track featuring strings, violin",
+    "ground_truth_clip_id": 1,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07811369001865387,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a classical, opera, classic track",
+    "ground_truth_clip_id": 2,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07755403965711594,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a opera, quiet track",
+    "ground_truth_clip_id": 3,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07728584855794907,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a classical, classic track featuring strings, violin",
+    "ground_truth_clip_id": 4,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07814393937587738,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a techno track",
+    "ground_truth_clip_id": 5,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07762279361486435,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a electronic, rock, fast track",
+    "ground_truth_clip_id": 6,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07793013006448746,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a fast track",
+    "ground_truth_clip_id": 7,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07763656228780746,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a classical track featuring violin",
+    "ground_truth_clip_id": 8,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07772543281316757,
+    "is_top1_correct": false
+  },
+  {
+    "query_caption": "a instrumental track featuring guitar",
+    "ground_truth_clip_id": 9,
+    "matched_clip_ranks": [
+      9,
+      10,
+      6
+    ],
+    "rank_1_score": -0.07781924307346344,
+    "is_top1_correct": true
+  }
+]

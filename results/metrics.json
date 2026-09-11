@@ -1,0 +1,46 @@
+{
+  "B1_random_tags": {
+    "macro_f1": 0.0,
+    "auc_pr": 0.0625,
+    "mae_emotion": null,
+    "r_at_5_retrieval": 0.05
+  },
+  "B2_cnn_melspec": {
+    "macro_f1": 0.0726,
+    "auc_pr": 1.0,
+    "mae_emotion": 1.15,
+    "r_at_5_retrieval": null
+  },
+  "task1_bert_only": {
+    "macro_f1": 0.318,
+    "auc_pr": 0.5979,
+    "mae_emotion": null,
+    "r_at_5_retrieval": null
+  },
+  "task2_gnn_only": {
+    "macro_f1": 0.1,
+    "auc_pr": 1.0,
+    "mae_emotion": 1.05,
+    "r_at_5_retrieval": null
+  },
+  "task3_gnn_bert_fusion": {
+    "macro_f1": 0.015,
+    "auc_pr": 0.2901,
+    "mae_emotion": 0.5949,
+    "r_at_5_retrieval": null
+  },
+  "task4_contrastive": {
+    "macro_f1": 0.015,
+    "auc_pr": 0.2901,
+    "mae_emotion": null,
+    "r_at_5_retrieval": 0.1667
+  },
+  "task4_retrieval_detail": {
+    "audio_to_caption_R@1": 0.03333333333333333,
+    "audio_to_caption_R@5": 0.16666666666666666,
+    "audio_to_caption_R@10": 0.3333333333333333,
+    "caption_to_audio_R@1": 0.03333333333333333,
+    "caption_to_audio_R@5": 0.16666666666666666,
+    "caption_to_audio_R@10": 0.3333333333333333
+  }
+}
